@@ -26,7 +26,7 @@ const createBoxes = (amount) => {
   for (let i = 0; i < amount; i += 1) {
     newEl.push(create.createDiv());
     newEl[i].style.backgroundColor = getRandomHexColor();
-    console.log(newEl[i]);
+
   };
 
   for (let i = 1; i < amount; i += 1) {
