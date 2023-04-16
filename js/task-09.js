@@ -13,6 +13,6 @@ const colorName = document.querySelector(".color");
 changeColBtn.addEventListener("click", onchangeColBtnClick);
 
 function onchangeColBtnClick() {
-  bodyEl.style.backgroundColor = getRandomHexColor();
-  colorName.textContent = `Бачиш, яка магія? Це колір: ${getRandomHexColor()}`;
+  const bodyCol = (bodyEl.style.backgroundColor = getRandomHexColor());
+  colorName.textContent = `Бачиш, яка магія? Це колір: ${bodyCol}`;
 }

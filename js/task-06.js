@@ -6,13 +6,19 @@
 const inputEl = document.querySelector("#validation-input");
 
 const requirement = parseInt(inputEl.getAttribute("data-length"));
+console.log(requirement);
 
-function onInputBlur (event) {
-    console.log(event.currentTarget.value.length === requirement);
+function onInputBlur(event) {
+  console.log(event.currentTarget.value.length === requirement);
+  console.log(event.currentTarget.value.length);
 
-    if (event.currentTarget.value.length === requirement) {
-        return inputEl.classList.add("valid");
-    } return inputEl.classList.add("invalid");   
+  if (event.currentTarget.value.length === requirement) {
+    inputEl.classList.remove("invalid");
+    inputEl.classList.add("valid");
+  } else {
+    inputEl.classList.remove("valid");
+    inputEl.classList.add("invalid");
+  }
 }
 
 inputEl.addEventListener("blur", onInputBlur);
